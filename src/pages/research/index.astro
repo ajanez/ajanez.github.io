@@ -1,0 +1,44 @@
+---
+import Base from "src/layouts/Base.astro";
+import { getCollection } from "astro:content";
+import FormattedDate from "src/components/FormattedDate.astro";
+
+import Accordion from 'src/components/Accordion.astro';
+
+
+const publications = (await getCollection("publications")).sort(
+  (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf(),
+);
+//render content from publications
+
+
+const workinPapers = (await getCollection("workingPapers")).sort(
+  (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf(),
+);
+
+const data = {
+  publications: publications,
+  workinPapers: workinPapers,
+};
+
+const title = "Research";
+const description = "Astrofolio Blog";
+
+---
+
+<Base title={title} description={description}>
+  {
+    Object.entries(data).map(([category, items]) => (
+      <div class="mb-10">
+        <h1 class="mb-8 text-4xl font-medium tracking-tight ">
+          {category === "publications" ? "Publications" : "Working Papers"}
+        </h1>
+        <div>
+          {items.map((item) => (
+              <Accordion item={item}/>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</Base>

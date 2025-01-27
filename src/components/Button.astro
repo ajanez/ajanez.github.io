@@ -1,0 +1,12 @@
+---
+const { title, cls: customClass = '' } = Astro.props;
+---
+<a
+  {...Astro.props}
+   class={`px-3 py-2 text-xs font-medium text-center cursor-pointer text-white bg-accent rounded-lg hover:bg-accent/80 focus:ring-4 focus:outline-none 
+   focus:ring-accent/30 dark:bg-accent-dark dark:hover:bg-accent-dark/80 dark:focus:ring-accent-dark/30 capitalize ${customClass}`}
+
+>
+  {title}
+</a>
+
