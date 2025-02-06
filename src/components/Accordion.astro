@@ -44,13 +44,14 @@ const {item } = Astro.props;
     }
   </div>
   <div class="flex gap-2">
+    <Button title="Abstract" cls="accordion-item"  data-target={`panel-${item.slug}`}></Button>
     {
       Object.entries(item.data.urls).map(([key, url]) => (
         <Button title={key} href={url} target="_blank">
         </Button>
       ))
     }
-    <Button title="Abstract" cls="accordion-item"  data-target={`panel-${item.slug}`}></Button>
+    
   </div>
 
   <div class="italic text-color dark:text-color-dark text-xl">
