@@ -1,3 +1,9 @@
+# Modify papers
+Folder: src/content
+
+# Modify files
+Folder: public/files
+
 # Astrofilio
 
 A clean, fast, and lightweight portfolio template built with [Astro](https://astro.build/), [Cloudflare](https://pages.cloudflare.com/), and [Tailwind CSS](https://tailwindcss.com/) for optimal performance.
