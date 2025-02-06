@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: String;
+  data: { name: string; subname?: string }[];
+}
+
+const { title, data } = Astro.props;
+---
+
+<div class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+  {title}
+</div>
+<ul
+  class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+>
+  {
+    data.map((row) => (
+      <li>
+        {row.name}
+        {row.subname && (
+          <>
+            <div class="text-sm ml-5 text-accent dark:text-accent-dark">
+              {row.subname}
+            </div>
+          </>
+        )}
+      </li>
+    ))
+  }
+</ul>

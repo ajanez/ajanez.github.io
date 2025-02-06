@@ -1,0 +1,27 @@
+---
+import TimelineItem from './TimelineItem.astro';
+
+import type { TeachingExperience } from 'src/types/teaching';
+
+interface Props {
+  data: TeachingExperience[];
+}
+const { data }: Props = Astro.props;
+
+---
+
+<div class="container mx-auto w-full max-w-2xl">
+  <div class="relative wrap overflow-hidden p-4 h-full">
+    <div class="border-l-2 border-color dark:border-color-dark absolute h-full left-4"></div>
+    
+    {data.map(d => (
+      <TimelineItem 
+        name={d.name}
+        role={d.role}
+        years={d.years}
+        level={d.level}
+        award={d.award}
+      />
+    ))}
+  </div>
+</div>

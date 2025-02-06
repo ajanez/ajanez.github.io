@@ -1,0 +1,80 @@
+---
+import Button from "src/components/Button.astro";
+interface Props {
+  item: {
+    slug: string,
+    body: string,
+    data: {
+      title: string,
+      authors: string[],      
+      summary: string,
+      urls: Record<string, any> // `urls` puede ser cualquier objeto
+    }
+  }
+}
+
+const {item } = Astro.props;
+---
+
+<div class="w-full flex flex-col justify-between text-2xl gap-2 mb-12">
+
+  <!--TODO: con un a y el slug muestro a jañez lo otro que pienso -->
+  <!-- <a
+  class="flex flex-col space-y-1 transition-opacity duration-200 hover:opacity-80"
+  href={`/research/${item.slug}`}
+> -->
+  <div 
+    class="flex flex-col space-y-1 p-1 rounded transition-opacity duration-200 hover:opacity-80 cursor-pointer"
+  >
+    <h2 class="text-color dark:text-color-dark tracking-tight">
+      {item.data.title}
+    </h2>
+  </div>
+
+  <div class="accordion-content hidden prose text-md" id={`panel-${item.slug}`}>
+    {item.body}
+  </div>
+  <div class="flex gap-2 my-2">
+    {
+      item.data.authors.map((author) => (
+        <span class="bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded border border-accent dark:border-accent-dark">
+          {author}
+        </span>
+      ))
+    }
+  </div>
+  <div class="flex gap-2">
+    {
+      Object.entries(item.data.urls).map(([key, url]) => (
+        <Button title={key} href={url} target="_blank">
+        </Button>
+      ))
+    }
+    <Button title="Abstract" cls="accordion-item"  data-target={`panel-${item.slug}`}></Button>
+  </div>
+
+  <div class="italic text-color dark:text-color-dark text-xl">
+    {item.data.summary}
+  </div>
+
+
+  <script>
+    document.addEventListener("astro:page-load", () => {
+      const accordionHeaders = document.querySelectorAll(".accordion-item");
+
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const target = header.getAttribute("data-target");
+          if (target) {
+            const content = document.getElementById(target);
+            if (content) {
+              content.classList.toggle("hidden");
+              header.classList.toggle("bg-accent/50");
+            }
+          }
+        });
+      });
+    });
+
+  </script>
+</div>

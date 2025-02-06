@@ -1,0 +1,18 @@
+---
+import type { TeachingExperience } from 'src/types/teaching';
+interface Props extends TeachingExperience {}
+const { name, role, years, level, award }: Props = Astro.props;
+---
+
+<div class="mb-8 flex justify-start text-color dark:text-color-dark leading-7">
+  <div class="flex flex-col items-start ml-6">
+    <div class="flex items-center my-3">
+      <div class="bg-color dark:bg-color-dark rounded-full h-2 w-2 mr-4"></div>
+      <h3 class="text-ñg font-normal leading-none text-accent dark:text-accent-dark">{years.join(' / ')}</h3>
+    </div>
+    <h4 class="text-3xl font-semibold text-color dark:text-color-dark">{name}</h4>
+    <p class="opacity-50">{role}</p>
+    <p>{level}</p>
+    <p class="italic opacity-75 text-accent dark:text-accent-dark">{award}</p>
+  </div>
+</div>

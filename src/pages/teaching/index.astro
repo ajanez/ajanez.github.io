@@ -1,0 +1,13 @@
+---
+import Base from "src/layouts/Base.astro";
+import { getCollection } from "astro:content";
+import Timeline from "src/components/Timeline.astro";
+import data from "src/content/teaching/data.json";
+
+const title = "Teaching";
+const description = "Astrofolio Blog";
+---
+
+<Base title={title} description={description}>
+  <Timeline data={data}/>
+</Base>
