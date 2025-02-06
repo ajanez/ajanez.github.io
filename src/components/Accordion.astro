@@ -6,7 +6,10 @@ interface Props {
     body: string,
     data: {
       title: string,
-      authors: string[],      
+      authors: {
+        name: string;
+        href?: string; // `href` es opcional y puede estar ausente
+      }[],
       summary: string,
       urls: Record<string, any> // `urls` puede ser cualquier objeto
     }
@@ -37,9 +40,11 @@ const {item } = Astro.props;
   <div class="flex gap-2 my-2">
     {
       item.data.authors.map((author) => (
-        <span class="bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded border border-accent dark:border-accent-dark">
-          {author}
-        </span>
+        <a href={author.href}>
+          <span class="bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded border border-accent dark:border-accent-dark">
+            {author.name}
+          </span>
+        </a>
       ))
     }
   </div>
