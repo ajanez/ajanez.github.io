@@ -10,5 +10,5 @@ export const metaData = {
 export const socialLinks = {
   twitter: "https://x.com/ajanezeco",
   address: "Sveavägen 65, 113 83 Stockholm",
-  email: "mailto:alvaro.janez.garcia@hh.se",
+  email: "mailto:alvaro.janez.garcia@hhs.se",
 };
