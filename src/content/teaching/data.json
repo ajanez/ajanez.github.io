@@ -1,45 +1,52 @@
 [
     {
+      "name": "Economics II (Macroeconomics)",
+      "role": "Course director.",
+      "years": [2025],
+      "level": "BSc in Retail Management, English.",
+      "institution": "Stockholm School of Economics"
+    },
+    {
       "name": "Microeconomics I (PhD Course)",
       "role": "Teaching Assistant for Professors Belén Jerez, Boris Ginzburg, and Philipp Denter.",
       "years": [2020, 2021, 2022],
       "level": "PhD Course, English.",
-      "award": "Awarded for Excellence in Teaching"
+      "institution": "Universidad Carlos III"
     },
     {
       "name": "International Trade",
       "role": "Teaching Assistant for Professors Clara Santamaría and Luisa Fuster.",
       "years": [2021, 2022],
       "level": "BSc in International Studies and Business Administration, English and Spanish.",
-      "award": "Awarded for Excellence in Teaching"
+      "institution": "Universidad Carlos III"
     },
     {
       "name": "Macroeconomics I",
       "role": "Teaching Assistant for Professor Andrés Erosa.",
       "years": [2021],
       "level": "BSc in International Studies and Business Administration, English.",
-      "award": "Awarded for Excellence in Teaching"
+      "institution": "Universidad Carlos III"
     },
     {
       "name": "Economic Growth",
       "role": "Teaching Assistant for Professor Antonia Díaz.",
       "years": [2020],
       "level": "BSc in Economics, English and Spanish.",
-      "award": "Awarded for Excellence in Teaching"
+      "institution": "Universidad Carlos III"
     },
     {
       "name": "Dynamic Macroeconomics",
       "role": "Teaching Assistant for Professor Luisa Fuster.",
       "years": [2020],
       "level": "BSc in Law and Business Administration, Spanish.",
-      "award": "Awarded for Excellence in Teaching"
+      "institution": "Universidad Carlos III"
     },
     {
       "name": "Game Theory",
       "role": "Teaching Assistant for Professor José Luis Ferreira.",
       "years": [2019],
       "level": "BSc in Business Administration, Spanish.",
-      "award": "Awarded for Excellence in Teaching"
+      "institution": "Universidad Carlos III"
     }
   ]
   
