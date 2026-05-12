@@ -1,1 +1,17 @@
-
+---
+title: "The Labor Market Effects of Regulating Platform Work: Evidence from Chile"
+summary: ""
+authors: 
+    - name: "Omar Bamieh"
+      href: ""
+    - name: "Juan J. Dolado"
+      href: ""
+    - name: "Álvaro Jáñez"
+      href: ""
+    - name: "Felix Wellschmied"
+      href: ""
+publishedAt: "2026-05-12"
+urls: 
+  download: "/files/working_papers/platform_work_chile/Platform_work_Chile.pdf"
+---
+Chile’s 2022 Platform Work Law mandates firms to monitor their subcontractors' formality and establishes maximum working hours, minimum pay, and the right to collective bargaining among independent contractors. Chile is possibly the country with the best platform work data in the world. By means of DiD/ event study regressions, we find that this reform induced an 8-percentage-point shift from the share of informal to formal subcontractors. However, there were no significant changes in collective bargaining, compliance with minimum pay and maximum hours, or wage differentials between employees and subcontractors. The changes in hiring practices and wages are rationalized through a structural labor market model with heterogeneous workers and labor contracts. The calibrated model also shows that the reform reduced platforms' profits, while strictly enforcing hours regulations leads to very small welfare losses.
